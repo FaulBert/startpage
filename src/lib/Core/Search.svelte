@@ -83,21 +83,12 @@
     searchEngineAlias = engine.alias;
     searchEngineUrl = engine.url;
   }
-  
-  const hideOnFocus = () => {
-    document.getElementById('lib').classList.add('hidden');
-  }
-  const showOnBlur = () => {
-    document.getElementById('lib').classList.remove('hidden');
-  }
 </script>
 
-<div class="absolute bottom-5 inset-x-10 md:inset-x-1/4">
+<div class="inset-x-10 md:inset-x-1/4">
   <form on:submit|preventDefault={search} class="flex justify-center shadow shadow-black shadow-md" autocomplete="off">
     <input
       bind:value={keyword}
-      on:focus={hideOnFocus}
-      on:blur={showOnBlur}
       class="bg-zinc-700/50 text-white/50 m-0 p-2 focus:outline-none w-[70vw]"
       type="text"
     />
